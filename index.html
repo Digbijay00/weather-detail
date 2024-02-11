@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="current-info">
+           <div class="search-area"> 
+                    <input type="text" placeholder="Enter city" id="city-input"></input>
+                    <button id="search-btn">Search</button>
+           </div>
+            <div class="date-container">
+                <div class="day-detail">
+                    <div class="time" id="time">
+                        12.30 <span id="am-pm">Pm</span>
+                    </div>
+                    <div class="date" id="date">
+                        Wednessday <span>6 Feb</span>
+                    </div>
+                </div>
+                <div class="others" id="current-weather-item">
+                     <div class="weather-item">
+                        <p>Humidity: </p>
+                        <p>95.2%</p>
+                    </div>
+                    <div class="weather-item">
+                        <div>Pressure: </div>
+                        <div>121</div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Wind speed: </div>
+                        <div>200</div>
+                    </div> 
+                    <div class="weather-item">
+                        <div>Temperature: </div>
+                        <div>20&#176; c</div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Fells like: </div>
+                        <div>22&#176; C </div>
+                    </div>
+                    <div class="weather-item">
+                        <div>Condition: </div>
+                        <div>
+                            <span>${data.current.condition.text}</span>
+                            <img src="${data.current.condition.icon}" alt="Weather Icon">
+                        </div>
+                    </div>
+                    
+                    <div class="weather-item">
+                        <div>Cloud: </div>
+                        <div>${data.current.cloud}&#176;C</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">Asia/Bhubaneswar</div>
+                <div class="country" id="country">Ind</div>
+            </div>
+
+        </div>   
+    </div>
+    </div>
+    <script src="./weather.js"></script>
+</body>
+</html>
